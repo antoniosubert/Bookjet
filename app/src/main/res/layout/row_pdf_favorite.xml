@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--PDF thumbnail, progress bar-->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:id="@+id/pdfRl"
+            android:layout_marginEnd="5dp"
+            android:background="@color/gray02">
+
+            <!--PDF view-->
+            <com.github.barteksc.pdfviewer.PDFView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pdfView"/>
+
+            <!--ProgressBar: show while pdf is loading-->
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/progressBar"/>
+
+        </RelativeLayout>
+
+        <!--Title-->
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_toEndOf="@id/pdfRl"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/removeFavBtn"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:text="Naslov knjige"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/removeFavBtn"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_favorite_white"
+            android:tint="@color/black"
+            android:background="@android:color/transparent"/>
+
+        <!--Description-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionTv"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_below="@id/titleTv"
+            android:layout_toEndOf="@id/pdfRl"
+            android:maxLines="4"
+            android:text="Opis knjige od max 4 retka."
+            android:ellipsize="end"/>
+
+        <!--category-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@id/categoryTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="Kategorija"
+            android:maxLines="1"/>
+
+        <!--Size of pdf-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sizeTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/pdfRl"
+            android:maxLines="1"
+            android:text="10 MB"/>
+
+        <!--Date added-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:text="dd/mm/yyyy"
+            android:maxLines="1"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/sizeTv"
+            android:textAlignment="center"
+            android:layout_toStartOf="@id/categoryTv"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
