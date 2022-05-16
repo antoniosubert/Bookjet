@@ -34,7 +34,7 @@ class MyApplication: Application() {
             val cal = Calendar.getInstance(Locale.ENGLISH)
             cal.timeInMillis = timestamp
             //format dd/mm/yyyy
-            return DateFormat.format("dd/mm/yyyy", cal).toString()
+            return DateFormat.format("dd/MM/yyyy", cal).toString()
         }
 
         //function to get pdf size

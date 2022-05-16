@@ -115,14 +115,18 @@
                 android:layout_height="wrap_content"
                 android:text="Račun"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textAlignment="center"/>
 
             <TextView
                 android:id="@+id/accountTypeTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="N/A"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textAlignment="center"/>
 
         </LinearLayout>
 
@@ -139,14 +143,18 @@
                 android:layout_height="wrap_content"
                 android:text="Član"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textAlignment="center"/>
 
             <TextView
                 android:id="@+id/memberDateTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="N/A"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textAlignment="center"/>
 
         </LinearLayout>
 
@@ -163,14 +171,46 @@
                 android:layout_height="wrap_content"
                 android:text="Favoriti - Knjige"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textAlignment="center"/>
 
             <TextView
                 android:id="@+id/favoriteBookCountTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="N/A"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <!--Account Status-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Status"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/accountStatusTv"
+                android:text="Not Verified"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textAlignment="center"/>
 
         </LinearLayout>
 
